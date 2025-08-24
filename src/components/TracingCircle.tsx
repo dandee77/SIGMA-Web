@@ -39,6 +39,7 @@ const TracingCircle: React.FC<TracingCircleProps> = ({
         <circle 
           r={size}
           fill="rgba(0, 0, 0, 0.7)"
+          opacity={delay > 0 ? 0 : 1}
           style={{
             filter: 'drop-shadow(0 0 12px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 6px rgba(0, 0, 0, 0.6))',
           }}
@@ -49,6 +50,13 @@ const TracingCircle: React.FC<TracingCircleProps> = ({
             begin={`${delay}s`}
             path={getPathData(pathId)}
             rotate="auto"
+          />
+          <animate
+            attributeName="opacity"
+            values={delay > 0 ? "0;1" : "1"}
+            dur="0.1s"
+            begin={`${delay}s`}
+            fill="freeze"
           />
         </circle>
       </svg>

@@ -63,9 +63,9 @@ const AnimatedBackground = () => {
       </svg>
       
       {/* Glowing dark circles tracing the paths */}
-      <TracingCircle pathId="path-one" duration={25} delay={0} size={10} />
-      <TracingCircle pathId="path-two" duration={35} delay={1} size={12} />
-      <TracingCircle pathId="path-three" duration={28} delay={4} size={9} />
+      <TracingCircle pathId="path-one" duration={25} delay={0} size={6} />
+      <TracingCircle pathId="path-two" duration={35} delay={1} size={7} />
+      <TracingCircle pathId="path-three" duration={28} delay={4} size={5} />
       
       {/* Animated mathematical symbols - positioned across the hero section */}
       <div className="absolute inset-0 w-full h-full z-[3]">
