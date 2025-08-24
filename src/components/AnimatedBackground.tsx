@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import AnimatedSymbol from './AnimatedSymbol';
 import TracingCircle from './TracingCircle';
 import GlowingPath from './GlowingPath';
@@ -37,13 +37,113 @@ const AnimatedBackground = () => {
         <TracingCircle pathId="path-one" size={17} color="#000" duration={60} delay={25} glowIntensity={3} />
         <TracingCircle pathId="path-two" size={16} color="#000" duration={75} delay={40} glowIntensity={2} />
       </div>
-      {/* Animated mathematical symbols - positioned at different start positions */}
+      {/* Animated mathematical symbols - positioned across the hero section */}
       <div className="absolute inset-0 w-full h-full z-[5]">
-        <AnimatedSymbol symbol="Σ" pathId="path-one" size="45px" color="#000" duration={80} delay={0} glowEffect={false} startPosition={0.1} />
-        <AnimatedSymbol symbol="O(n)" pathId="path-two" size="38px" color="#000" duration={95} delay={10} glowEffect={false} startPosition={0.3} />
-        <AnimatedSymbol symbol="∆" pathId="path-three" size="42px" color="#000" duration={85} delay={5} glowEffect={false} startPosition={0.5} />
-        <AnimatedSymbol symbol="π" pathId="path-one" size="40px" color="#000" duration={80} delay={20} glowEffect={false} startPosition={0.7} />
-        <AnimatedSymbol symbol="λ" pathId="path-two" size="44px" color="#000" duration={95} delay={15} glowEffect={false} startPosition={0.9} />
+        {/* Spinning symbols */}
+        <AnimatedSymbol 
+          symbol="Σ" 
+          x={15} 
+          y={25} 
+          size="45px" 
+          color="#000" 
+          animationType="spin" 
+          duration={8} 
+          delay={0} 
+        />
+        <AnimatedSymbol 
+          symbol="π" 
+          x={85} 
+          y={35} 
+          size="40px" 
+          color="#000" 
+          animationType="spin" 
+          duration={10} 
+          delay={2} 
+        />
+        <AnimatedSymbol 
+          symbol="∫" 
+          x={20} 
+          y={75} 
+          size="42px" 
+          color="#000" 
+          animationType="spin" 
+          duration={12} 
+          delay={4} 
+        />
+        
+        {/* Floating symbols */}
+        <AnimatedSymbol 
+          symbol="∆" 
+          x={75} 
+          y={20} 
+          size="38px" 
+          color="#000" 
+          animationType="float" 
+          duration={6} 
+          delay={1} 
+        />
+        <AnimatedSymbol 
+          symbol="λ" 
+          x={10} 
+          y={50} 
+          size="44px" 
+          color="#000" 
+          animationType="float" 
+          duration={8} 
+          delay={3} 
+        />
+        <AnimatedSymbol 
+          symbol="∑" 
+          x={90} 
+          y={70} 
+          size="40px" 
+          color="#000" 
+          animationType="float" 
+          duration={7} 
+          delay={5} 
+        />
+        
+        {/* Pulsing symbols */}
+        <AnimatedSymbol 
+          symbol="O(n)" 
+          x={15} 
+          y={90} 
+          size="36px" 
+          color="#000" 
+          animationType="pulse" 
+          duration={4} 
+          delay={0.5} 
+        />
+        <AnimatedSymbol 
+          symbol="∞" 
+          x={35} 
+          y={60} 
+          size="48px" 
+          color="#000" 
+          animationType="pulse" 
+          duration={5} 
+          delay={2.5} 
+        />
+        <AnimatedSymbol 
+          symbol="θ" 
+          x={80} 
+          y={85} 
+          size="41px" 
+          color="#000" 
+          animationType="pulse" 
+          duration={6} 
+          delay={1.5} 
+        />
+        <AnimatedSymbol 
+          symbol="α" 
+          x={60} 
+          y={80} 
+          size="39px" 
+          color="#000" 
+          animationType="pulse" 
+          duration={4.5} 
+          delay={3.5} 
+        />
       </div>
       {/* Large subtle decorative elements */}
       <div className="absolute top-[10%] left-[8%] w-32 h-32 rounded-full bg-gradient-to-br from-gray-100 to-white opacity-20 blur-lg z-[2]"></div>
