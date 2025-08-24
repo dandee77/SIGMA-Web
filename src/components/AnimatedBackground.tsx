@@ -12,16 +12,20 @@ const AnimatedBackground = () => {
   return <div className="absolute inset-0 w-full h-full overflow-hidden">
       {/* Background grid at the bottom layer */}
       <BackgroundGrid />
+      
+      {/* Dark overlay for better contrast */}
+      <div className="absolute inset-0 bg-black/5 z-[1]"></div>
+      
       {/* All paths in a single SVG element */}
-      <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1400 800">
-        {/* Secondary subtle paths */}
-        <path id="path-four" d="M-100,50 Q300,150 700,100 T1400,180 T2200,120" fill="none" stroke="#000" strokeOpacity="0.12" strokeWidth="2" strokeDasharray="5 25" className="path-four" />
-        <path id="path-five" d="M-100,500 Q300,400 700,480 T1400,380 T2200,450" fill="none" stroke="#000" strokeOpacity="0.08" strokeWidth="2" strokeDasharray="4 20" className="path-five" />
+      <svg className="absolute inset-0 w-full h-full z-[2]" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1400 800">
+        {/* Secondary subtle paths - more spread out */}
+        <path id="path-four" d="M-100,80 Q400,20 800,120 T1500,60" fill="none" stroke="#000" strokeOpacity="0.12" strokeWidth="2" strokeDasharray="5 25" className="path-four" />
+        <path id="path-five" d="M-100,720 Q400,780 800,680 T1500,740" fill="none" stroke="#000" strokeOpacity="0.08" strokeWidth="2" strokeDasharray="4 20" className="path-five" />
         
-        {/* Main animated paths with thicker lines that circles will follow */}
+        {/* Main animated paths with thicker lines that are more spread out */}
         <path 
           id="path-one" 
-          d="M0,150 Q350,50 700,200 T1400,100" 
+          d="M0,200 Q350,120 700,280 T1400,180" 
           fill="none" 
           stroke="#000" 
           strokeWidth="6" 
@@ -33,7 +37,7 @@ const AnimatedBackground = () => {
         />
         <path 
           id="path-two" 
-          d="M0,450 Q350,650 700,450 T1400,550" 
+          d="M0,600 Q350,520 700,620 T1400,550" 
           fill="none" 
           stroke="#000" 
           strokeWidth="7" 
@@ -45,7 +49,7 @@ const AnimatedBackground = () => {
         />
         <path 
           id="path-three" 
-          d="M0,300 Q350,400 700,300 T1400,200" 
+          d="M0,400 Q350,320 700,450 T1400,370" 
           fill="none" 
           stroke="#000" 
           strokeWidth="5.6" 
@@ -58,7 +62,7 @@ const AnimatedBackground = () => {
       </svg>
       
       {/* Animated mathematical symbols - positioned across the hero section */}
-      <div className="absolute inset-0 w-full h-full z-[5]">
+      <div className="absolute inset-0 w-full h-full z-[3]">
         {/* Spinning symbols */}
         <AnimatedSymbol 
           symbol="Σ" 
