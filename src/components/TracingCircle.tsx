@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
+
 interface TracingCircleProps {
   pathId: string;
   size: number;
@@ -7,6 +8,7 @@ interface TracingCircleProps {
   delay: number;
   glowIntensity?: number;
 }
+
 const TracingCircle = ({
   pathId,
   size,
@@ -16,6 +18,7 @@ const TracingCircle = ({
   glowIntensity = 2
 }: TracingCircleProps) => {
   const circleRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     // Wait for DOM to be fully loaded
     const initAnimation = () => {
@@ -24,20 +27,26 @@ const TracingCircle = ({
         console.error('Circle element ref not found');
         return;
       }
+
       // Get the path element to follow
-      const path = document.getElementById(pathId);
-      if (!path) {
+      const pathElement = document.getElementById(pathId);
+      if (!pathElement) {
         console.error(`Path with id ${pathId} not found`);
         return;
       }
+
+      const path = pathElement as unknown as SVGPathElement;
+
       try {
         // Check if path has getTotalLength method (it should be an SVG path)
         if (typeof path.getTotalLength !== 'function') {
           console.error(`Path element with id ${pathId} is not an SVG path element or doesn't support getTotalLength`);
           return;
         }
+
         const pathLength = path.getTotalLength();
         console.log(`Circle path ${pathId} length:`, pathLength);
+
         // Function to position the element along the path
         const positionElementAlongPath = (progress: number) => {
           try {
@@ -80,7 +89,7 @@ const TracingCircle = ({
       }
     };
     // Run after a slight delay to ensure DOM is ready
-    const timeoutId = setTimeout(initAnimation, 500); // Increased delay to ensure DOM is ready
+    const timeoutId = setTimeout(initAnimation, 100); // Reduced delay to 100ms
     return () => clearTimeout(timeoutId);
   }, [pathId, size, duration, delay]);
   return <div ref={circleRef} className="absolute tracing-circle" style={{

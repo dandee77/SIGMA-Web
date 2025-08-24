@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 import AnimatedSymbol from './AnimatedSymbol';
-import TracingCircle from './TracingCircle';
-import GlowingPath from './GlowingPath';
 import BackgroundGrid from './BackgroundGrid';
 const AnimatedBackground = () => {
   const [mounted, setMounted] = useState(false);
@@ -14,25 +12,51 @@ const AnimatedBackground = () => {
   return <div className="absolute inset-0 w-full h-full overflow-hidden">
       {/* Background grid at the bottom layer */}
       <BackgroundGrid />
-      {/* Secondary subtle paths */}
+      {/* All paths in a single SVG element */}
       <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1400 800">
+        {/* Secondary subtle paths */}
         <path id="path-four" d="M-100,50 Q300,150 700,100 T1400,180 T2200,120" fill="none" stroke="#000" strokeOpacity="0.12" strokeWidth="2" strokeDasharray="5 25" className="path-four" />
         <path id="path-five" d="M-100,500 Q300,400 700,480 T1400,380 T2200,450" fill="none" stroke="#000" strokeOpacity="0.08" strokeWidth="2" strokeDasharray="4 20" className="path-five" />
+        
+        {/* Main animated paths with thicker lines that circles will follow */}
+        <path 
+          id="path-one" 
+          d="M0,150 Q350,50 700,200 T1400,100" 
+          fill="none" 
+          stroke="#000" 
+          strokeWidth="6" 
+          strokeDasharray="12 18" 
+          strokeLinecap="round" 
+          strokeOpacity="0.7" 
+          className="animate-path-path-one"
+          style={{ animation: `dashOffset 80s linear infinite normal` }}
+        />
+        <path 
+          id="path-two" 
+          d="M0,450 Q350,650 700,450 T1400,550" 
+          fill="none" 
+          stroke="#000" 
+          strokeWidth="7" 
+          strokeDasharray="14 20" 
+          strokeLinecap="round" 
+          strokeOpacity="0.7" 
+          className="animate-path-path-two"
+          style={{ animation: `dashOffset 95s linear infinite reverse` }}
+        />
+        <path 
+          id="path-three" 
+          d="M0,300 Q350,400 700,300 T1400,200" 
+          fill="none" 
+          stroke="#000" 
+          strokeWidth="5.6" 
+          strokeDasharray="10 16" 
+          strokeLinecap="round" 
+          strokeOpacity="0.7" 
+          className="animate-path-path-three"
+          style={{ animation: `dashOffset 85s linear infinite normal` }}
+        />
       </svg>
-      {/* Main animated paths with thicker lines */}
-      <div className="absolute inset-0 w-full h-full z-[3]">
-        <GlowingPath id="path-one" path="M-200,150 Q250,50 600,200 T1200,100 T2000,250" strokeWidth={3} glowWidth={0} glowColor="transparent" dashArray="12 18" animationDuration={80} animationDirection="normal" />
-        <GlowingPath id="path-two" path="M-200,450 Q250,650 700,450 T1400,550 T2100,450" strokeWidth={3.5} glowWidth={0} glowColor="transparent" dashArray="14 20" animationDuration={95} animationDirection="reverse" />
-        <GlowingPath id="path-three" path="M-200,300 Q250,400 600,300 T1200,200 T2000,300" strokeWidth={2.8} glowWidth={0} glowColor="transparent" dashArray="10 16" animationDuration={85} animationDirection="normal" />
-      </div>
-      {/* Tracing circles */}
-      <div className="absolute inset-0 w-full h-full z-[4]">
-        <TracingCircle pathId="path-one" size={14} color="#000" duration={60} delay={5} glowIntensity={2} />
-        <TracingCircle pathId="path-two" size={20} color="#000" duration={75} delay={0} glowIntensity={3} />
-        <TracingCircle pathId="path-three" size={12} color="#000" duration={65} delay={20} glowIntensity={2.5} />
-        <TracingCircle pathId="path-one" size={17} color="#000" duration={60} delay={25} glowIntensity={3} />
-        <TracingCircle pathId="path-two" size={16} color="#000" duration={75} delay={40} glowIntensity={2} />
-      </div>
+      
       {/* Animated mathematical symbols - positioned across the hero section */}
       <div className="absolute inset-0 w-full h-full z-[5]">
         {/* Spinning symbols */}
