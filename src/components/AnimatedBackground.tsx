@@ -18,14 +18,14 @@ const AnimatedBackground = () => {
       
       {/* All paths in a single SVG element */}
       <svg className="absolute inset-0 w-full h-full z-[2]" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1400 800">
-        {/* Secondary subtle paths - more spread out */}
-        <path id="path-four" d="M-100,80 Q400,20 800,120 T1500,60" fill="none" stroke="#000" strokeOpacity="0.12" strokeWidth="2" strokeDasharray="5 25" className="path-four" />
-        <path id="path-five" d="M-100,720 Q400,780 800,680 T1500,740" fill="none" stroke="#000" strokeOpacity="0.08" strokeWidth="2" strokeDasharray="4 20" className="path-five" />
+        {/* Secondary subtle paths - spread across full viewport */}
+        <path id="path-four" d="M-200,60 Q400,20 800,100 T1600,80" fill="none" stroke="#000" strokeOpacity="0.12" strokeWidth="2" strokeDasharray="5 25" className="path-four" />
+        <path id="path-five" d="M-200,740 Q400,780 800,720 T1600,760" fill="none" stroke="#000" strokeOpacity="0.08" strokeWidth="2" strokeDasharray="4 20" className="path-five" />
         
-        {/* Main animated paths with thicker lines that are more spread out */}
+        {/* Main animated paths - natural curves with better spacing */}
         <path 
           id="path-one" 
-          d="M0,200 Q350,120 700,280 T1400,180" 
+          d="M-200,120 Q250,80 600,160 T1200,120 T2000,180" 
           fill="none" 
           stroke="#000" 
           strokeWidth="6" 
@@ -37,7 +37,7 @@ const AnimatedBackground = () => {
         />
         <path 
           id="path-two" 
-          d="M0,600 Q350,520 700,620 T1400,550" 
+          d="M-200,680 Q250,720 600,640 T1200,680 T2000,620" 
           fill="none" 
           stroke="#000" 
           strokeWidth="7" 
@@ -49,7 +49,7 @@ const AnimatedBackground = () => {
         />
         <path 
           id="path-three" 
-          d="M0,400 Q350,320 700,450 T1400,370" 
+          d="M-200,400 Q250,360 600,440 T1200,380 T2000,420" 
           fill="none" 
           stroke="#000" 
           strokeWidth="5.6" 
