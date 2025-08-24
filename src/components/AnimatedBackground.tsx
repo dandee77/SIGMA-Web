@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import AnimatedSymbol from './AnimatedSymbol';
 import BackgroundGrid from './BackgroundGrid';
+import TracingCircle from './TracingCircle';
 const AnimatedBackground = () => {
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
@@ -28,38 +29,43 @@ const AnimatedBackground = () => {
           d="M-200,120 Q250,80 600,160 T1200,120 T2000,180" 
           fill="none" 
           stroke="#000" 
-          strokeWidth="6" 
-          strokeDasharray="12 18" 
+          strokeWidth="2.5" 
+          strokeDasharray="25 15" 
           strokeLinecap="round" 
-          strokeOpacity="0.7" 
+          strokeOpacity="0.4" 
           className="animate-path-path-one"
-          style={{ animation: `dashOffset 80s linear infinite normal` }}
+          style={{ animation: `dashOffset 300s linear infinite normal` }}
         />
         <path 
           id="path-two" 
           d="M-200,680 Q250,720 600,640 T1200,680 T2000,620" 
           fill="none" 
           stroke="#000" 
-          strokeWidth="7" 
-          strokeDasharray="14 20" 
+          strokeWidth="2.5" 
+          strokeDasharray="28 18" 
           strokeLinecap="round" 
-          strokeOpacity="0.7" 
+          strokeOpacity="0.4" 
           className="animate-path-path-two"
-          style={{ animation: `dashOffset 95s linear infinite reverse` }}
+          style={{ animation: `dashOffset 300s linear infinite reverse` }}
         />
         <path 
           id="path-three" 
           d="M-200,400 Q250,360 600,440 T1200,380 T2000,420" 
           fill="none" 
           stroke="#000" 
-          strokeWidth="5.6" 
-          strokeDasharray="10 16" 
+          strokeWidth="2.8" 
+          strokeDasharray="22 12" 
           strokeLinecap="round" 
-          strokeOpacity="0.7" 
+          strokeOpacity="0.4" 
           className="animate-path-path-three"
-          style={{ animation: `dashOffset 85s linear infinite normal` }}
+          style={{ animation: `dashOffset 300s linear infinite normal` }}
         />
       </svg>
+      
+      {/* Glowing dark circles tracing the paths */}
+      <TracingCircle pathId="path-one" duration={25} delay={0} size={10} />
+      <TracingCircle pathId="path-two" duration={35} delay={1} size={12} />
+      <TracingCircle pathId="path-three" duration={28} delay={4} size={9} />
       
       {/* Animated mathematical symbols - positioned across the hero section */}
       <div className="absolute inset-0 w-full h-full z-[3]">
@@ -82,7 +88,7 @@ const AnimatedBackground = () => {
           color="#000" 
           animationType="spin" 
           duration={10} 
-          delay={2} 
+          delay={0} 
         />
         <AnimatedSymbol 
           symbol="∫" 
@@ -92,7 +98,7 @@ const AnimatedBackground = () => {
           color="#000" 
           animationType="spin" 
           duration={12} 
-          delay={4} 
+          delay={0} 
         />
         
         {/* Floating symbols */}
@@ -104,7 +110,7 @@ const AnimatedBackground = () => {
           color="#000" 
           animationType="float" 
           duration={6} 
-          delay={1} 
+          delay={0} 
         />
         <AnimatedSymbol 
           symbol="λ" 
@@ -114,7 +120,7 @@ const AnimatedBackground = () => {
           color="#000" 
           animationType="float" 
           duration={8} 
-          delay={3} 
+          delay={0} 
         />
         <AnimatedSymbol 
           symbol="∑" 
@@ -124,7 +130,7 @@ const AnimatedBackground = () => {
           color="#000" 
           animationType="float" 
           duration={7} 
-          delay={5} 
+          delay={0} 
         />
         
         {/* Pulsing symbols */}
@@ -136,7 +142,7 @@ const AnimatedBackground = () => {
           color="#000" 
           animationType="pulse" 
           duration={4} 
-          delay={0.5} 
+          delay={0} 
         />
         <AnimatedSymbol 
           symbol="∞" 
@@ -146,7 +152,7 @@ const AnimatedBackground = () => {
           color="#000" 
           animationType="pulse" 
           duration={5} 
-          delay={2.5} 
+          delay={0} 
         />
         <AnimatedSymbol 
           symbol="θ" 
@@ -156,7 +162,7 @@ const AnimatedBackground = () => {
           color="#000" 
           animationType="pulse" 
           duration={6} 
-          delay={1.5} 
+          delay={0} 
         />
         <AnimatedSymbol 
           symbol="α" 
@@ -166,7 +172,7 @@ const AnimatedBackground = () => {
           color="#000" 
           animationType="pulse" 
           duration={4.5} 
-          delay={3.5} 
+          delay={0} 
         />
       </div>
       {/* Large subtle decorative elements */}

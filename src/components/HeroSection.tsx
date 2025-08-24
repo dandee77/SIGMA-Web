@@ -1,11 +1,11 @@
 import AnimatedBackground from './AnimatedBackground';
 import { PlayIcon } from 'lucide-react';
 const HeroSection = () => {
-  return <div className="relative w-full min-h-screen overflow-hidden bg-white">
+  return <div className="relative w-full h-screen overflow-hidden bg-white">
       <AnimatedBackground />
       
       {/* Glassmorphism container for content */}
-      <div className="relative z-20 flex flex-col items-center justify-center px-8 min-h-screen text-center">
+      <div className="relative z-20 flex flex-col items-center justify-center px-8 h-screen text-center">
         {/* Glassmorphism background for text area - centered and compact */}
         <div className="absolute bg-white/20 backdrop-blur-sm rounded-3xl border border-white/30 shadow-2xl"
              style={{
