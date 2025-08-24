@@ -1,18 +1,44 @@
 import React from 'react';
 const BackgroundGrid = () => {
-  return <div className="absolute inset-0 w-full h-full z-0">
-      <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
-        <defs>
-          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0, 0, 0, 0.05)" strokeWidth="0.5" />
-          </pattern>
-          <pattern id="grid-bold" width="200" height="200" patternUnits="userSpaceOnUse">
-            <path d="M 200 0 L 0 0 0 200" fill="none" stroke="rgba(0, 0, 0, 0.08)" strokeWidth="0.8" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#grid)" />
-        <rect width="100%" height="100%" fill="url(#grid-bold)" />
-      </svg>
-    </div>;
+  return (
+    <div className="absolute inset-0 w-full h-full z-0">
+      {/* Fine grid lines */}
+      <div 
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(156, 163, 175, 0.2) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(156, 163, 175, 0.2) 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px',
+        }}
+      />
+      
+      {/* Medium grid lines every 5th line */}
+      <div 
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(156, 163, 175, 0.3) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(156, 163, 175, 0.3) 1px, transparent 1px)
+          `,
+          backgroundSize: '200px 200px',
+        }}
+      />
+      
+      {/* Major grid lines every 10th line */}
+      <div 
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(156, 163, 175, 0.4) 2px, transparent 2px),
+            linear-gradient(90deg, rgba(156, 163, 175, 0.4) 2px, transparent 2px)
+          `,
+          backgroundSize: '400px 400px',
+        }}
+      />
+    </div>
+  );
 };
+
 export default BackgroundGrid;

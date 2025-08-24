@@ -14,10 +14,6 @@ const AnimatedBackground = () => {
   return <div className="absolute inset-0 w-full h-full overflow-hidden">
       {/* Background grid at the bottom layer */}
       <BackgroundGrid />
-      {/* Glass effect overlay */}
-      <div className="absolute inset-0 bg-gray-400/10 backdrop-blur-[2px] z-[1]"></div>
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-radial from-white to-gray-100 opacity-70 z-[2]"></div>
       {/* Secondary subtle paths */}
       <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1400 800">
         <path id="path-four" d="M-100,50 Q300,150 700,100 T1400,180 T2200,120" fill="none" stroke="#000" strokeOpacity="0.12" strokeWidth="2" strokeDasharray="5 25" className="path-four" />
