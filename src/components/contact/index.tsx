@@ -1,5 +1,5 @@
 import { MotionValue, motion, useAnimationControls } from "framer-motion";
-import { Linkedin, Mail, Phone } from "lucide-react";
+import { Facebook, Mail, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 import Magnetic from "../Magnetic";
 
@@ -73,7 +73,7 @@ const Contact: React.FC<ContactSectionProps> = ({
       >
         <Magnetic>
           <a
-            href="mailto:info@bencodes.de"
+            href="sigmasolutions.comp@gmail.com"
             className="flex gap-x-2 rounded-full border-dark border-2 px-2 py-1"
           >
             <Mail />
@@ -82,7 +82,7 @@ const Contact: React.FC<ContactSectionProps> = ({
         </Magnetic>
         <Magnetic>
           <a
-            href="tel:+4917621577766"
+            href="tel:+639386215892"
             className="flex gap-x-2 rounded-full border-dark border-2 px-2 py-1"
           >
             <Phone />
@@ -91,12 +91,12 @@ const Contact: React.FC<ContactSectionProps> = ({
         </Magnetic>
         <Magnetic>
           <a
-            href="https://linkedin.com/in/ben-böckmann-296293265"
+            href="https://www.facebook.com/share/1CM5AGTdWB/"
             target="_blank"
             className="flex gap-x-2 rounded-full border-dark border-2 px-2 py-1"
           >
-            <Linkedin />
-            LinkedIn
+            <Facebook />
+            Facebook
           </a>
         </Magnetic>
       </motion.div>
@@ -105,16 +105,16 @@ const Contact: React.FC<ContactSectionProps> = ({
         variants={fadeInUpVariants}
         className="flex flex-col items-center mt-[5vh]"
       >
-        <p className="poppins-regular text-2xl">bb</p>
-        <p className="poppins-extralight text-2xl">Ben Böckmann</p>
+        <p className="poppins-regular text-2xl">Σ</p>
+        <p className="poppins-extralight text-2xl">Sigma Solutions</p>
 
         <p className="poppins-light px-4 text-gray-3 tracking-[calc(-1rem*0.03)] mt-[8vh] select-none mb-1 text-center">
-          © Ben Böckmann {new Date().getFullYear()}. All rights reserved.
-          Location: Germany
+          © Sigma Solutions {new Date().getFullYear()}. All rights reserved.
+          Location: Philippines
         </p>
         <p className="poppins-light px-4 text-gray-3 select-none tracking-[calc(-1rem*0.03)] mb-8 max-w-[500px] text-center">
-          This site showcases my personal projects and professional work.
-          Content may not be used without permission.
+          This site showcases our startup’s projects and solutions.
+          All content is owned by Sigma Solutions and may not be used without permission.
         </p>
       </motion.div>
     </motion.div>
