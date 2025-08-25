@@ -168,7 +168,7 @@ function App() {
                 textShadow: "0px 0px 6px rgba(255,255,255,0.25)",
               }}
             >
-              Turning ideas into{" "}
+              Summming{" "}
               <motion.span
                 style={{
                   backgroundImage: useTransform(
@@ -181,9 +181,9 @@ function App() {
                   color: "transparent",
                 }}
               >
-                creative
+                Innovations
               </motion.span>{" "}
-              solutions.
+              Into Creative Solutions.
             </motion.h1>
             <motion.p
               className="poppins-regular text-lg mt-4 max-w-[390px] text-gray-2 max-sm:text-[4vw] px-4 text-center leading-[123%]"
@@ -198,7 +198,7 @@ function App() {
                 opacity: useTransform(scrollYProgress, [0, 0.3], [1, 0]),
               }}
             >
-              Innovative web developer crafting unique user experiences.
+              Sigma Solutions
             </motion.p>
           </motion.div>
         </motion.div>

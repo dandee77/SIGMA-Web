@@ -76,8 +76,7 @@ const About: React.FC<AboutSectionProps> = ({
           custom={0}
           className={`khula-semibold ${isMobile ? "text-4xl" : "text-6xl"}`}
         >
-          I believe in a user centered design approach, ensuring that every
-          project I work on is tailored to meet the specific needs of its users.
+          We are a technology-driven startup that creates innovative software and hardware solutions.
         </motion.h1>
 
         <motion.div
@@ -86,7 +85,7 @@ const About: React.FC<AboutSectionProps> = ({
           className={`mt-[10vh] ${isMobile && "mt-8"}`}
         >
           <p className="text-gray-3 poppins-light-italic ml-2 mb-1 select-none">
-            This is me.
+            Hi, We are
           </p>
           <motion.hr
             variants={lineVariants}
@@ -104,7 +103,7 @@ const About: React.FC<AboutSectionProps> = ({
               custom={2}
               className="khula-light text-5xl text-nowrap"
             >
-              Hi, I'm Ben.
+            Sigma Solutions.
             </motion.h2>
             {!isMobile && (
               <Magnetic>
@@ -126,15 +125,10 @@ const About: React.FC<AboutSectionProps> = ({
             }`}
           >
             <motion.p variants={fadeInUpVariants} custom={4}>
-              I'm a 18 year-old web developer dedicated to turning ideas into
-              creative solutions. I specialize in creating seamless and
-              intuitive user experiences.
+              We build mobile, web, and desktop apps, along with custom tools, research, and data analytics. On the hardware side, we work on IoT devices, embedded systems, smart integrations, prototypes, and support.
             </motion.p>
             <motion.p variants={fadeInUpVariants} custom={5}>
-              I'm involved in every step of the process: from discovery and
-              design to development, testing, and deployment. I focus on
-              delivering high-quality, scalable results that drive positive user
-              experiences.
+              By combining software and hardware skills, we deliver practical tech solutions that solve real problems. Our goal is to keep innovating and creating smart solutions that truly stand out.
             </motion.p>
           </div>
           {isMobile && (
