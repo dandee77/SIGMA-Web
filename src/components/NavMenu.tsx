@@ -114,14 +114,14 @@ const NavMenu: React.FC<NavMenuProps> = ({ isOpen, onClose }) => {
               <ul className="space-y-2">
                 {[
                   {
-                    name: "LinkedIn",
-                    link: "https://linkedin.com/in/ben-böckmann-296293265",
+                    name: "Facebook",
+                    link: "https://www.facebook.com/share/1CM5AGTdWB/",
                   },
                   {
                     name: "Instagram",
-                    link: "https://instagram.com/ben.bck_prvt",
+                    link: "#",
                   },
-                  { name: "Github", link: "https://github.com/bencodes07" },
+                  { name: "Fiverr", link: "#" },
                 ].map((item, index) => (
                   <motion.li
                     key={item.name}
@@ -150,7 +150,7 @@ const NavMenu: React.FC<NavMenuProps> = ({ isOpen, onClose }) => {
               <h3 className="text-lg khula-light">Menu</h3>
               <ul className="space-y-2">
                 {[
-                  { name: "About Me", id: "about" },
+                  { name: "About Us", id: "about" },
                   { name: "Projects", id: "projects" },
                   /* { name: "Experience", id: "about" }, */
                   { name: "Contact", id: "contact" },
@@ -188,8 +188,8 @@ const NavMenu: React.FC<NavMenuProps> = ({ isOpen, onClose }) => {
           transition={{ delay: 0.5, duration: 0.3 }}
         >
           <p className="text-sm text-gray-600">Get in touch</p>
-          <a href="mailto:info@bencodes.de" className="text-lg hover:underline">
-            info@bencodes.de
+          <a href="mailto:sigmasolutions.comp@gmail.com" className="text-lg hover:underline">
+            sigmasolutions.comp@gmail.com
           </a>
         </motion.div>
       </motion.div>

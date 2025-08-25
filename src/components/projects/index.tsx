@@ -273,7 +273,7 @@ const Projects: React.FC<ProjectsSectionProps> = ({
             variants={fadeInUpVariants}
             className="poppins-light text-3xl tracking-[calc(3rem * 0.02)] text-center mb-10"
           >
-            Selected Projects
+            What We’ve Built
           </motion.h2>
 
           {/* Mobile Version: Card like design */}
@@ -314,7 +314,7 @@ const Projects: React.FC<ProjectsSectionProps> = ({
             variants={fadeInUpVariants}
             className="poppins-light text-3xl tracking-[calc(3rem * 0.02)] mb-10"
           >
-            Selected Projects
+            What We’ve Built
           </motion.h2>
 
           {hasAnimated && (
