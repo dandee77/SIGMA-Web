@@ -87,7 +87,7 @@ const Loader: React.FC<LoaderProps> = ({ onLoadingComplete }) => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             <motion.path
-              d="M8 2 V28 M8 22 A7 7 0 1 1 8 22.01"
+              d="M24 6 L6 6 L16 16 L6 26 L24 26"
               fill="none"
               stroke="#000000"
               strokeWidth="2"
