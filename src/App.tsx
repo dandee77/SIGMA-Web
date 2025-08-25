@@ -181,7 +181,7 @@ function App() {
                   color: "transparent",
                 }}
               >
-                Innovations
+                Innovation
               </motion.span>{" "}
               Into Creative Solutions.
             </motion.h1>
